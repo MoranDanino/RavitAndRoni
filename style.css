@@ -1,0 +1,36 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f8f8;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+.video-container {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.08);
+}
+
+h1, h2 {
+    color: #2e6c4d;
+}
+
+.thanks {
+    margin-top: 32px;
+    font-weight: bold;
+    color: #2e6c4d;
+}
