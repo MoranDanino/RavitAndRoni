@@ -7,16 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- נגן מוסיקה אוטומטי מוסתר -->
-    <audio id="bgMusic" src="ravit.mp3" autoplay loop></audio>
-
     <div class="page-container">
         <!-- וידאו רספונסיבי קטן -->
         <div class="video-wrapper">
-            <video id="openingVideo" playsinline autoplay muted loop poster="poster.jpg">
+            <video id="openingVideo" playsinline controls poster="poster.jpg">
                 <source src="RavitAndRoni.mp4" type="video/mp4">
                 הדפדפן שלך אינו תומך בסרטונים.
             </video>
+            <div class="video-tip">לחצו על ▶ כדי להפעיל את הסרטון עם מוזיקה</div>
         </div>
 
         <!-- תוכן האתר -->
@@ -36,6 +34,5 @@
 <!--             <p class="thanks">תודה ונתראה בחיפה!</p> -->
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
