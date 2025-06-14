@@ -6,113 +6,50 @@ body {
     color: #222;
     direction: rtl;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .page-container {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 18px 8px 32px 8px;
-    background: rgba(255,255,255,0.93);
+    width: 100%;
+    max-width: 700px;
+    margin: 32px auto;
+    padding: 0;
+    background: transparent;
     border-radius: 24px;
-    box-shadow: 0 8px 32px rgba(44,62,80,0.13);
-    margin-top: 24px;
-}
-
-.video-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto 18px auto;
-    width: 100%;
-    max-width: 240px;
-    background: #222;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 2px 16px rgba(44,62,80,0.13);
-    /* aspect-ratio: 9 / 16;  <-- הוסר כדי למנוע שטח ריק */
-    padding: 0; /* אין padding מיותר */
-}
-
-.video-wrapper video {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 16px;
-    background: #222;
-    display: block;
-}
-
-.content {
-    margin-top: 10px;
-    text-align: center;
-    padding: 0 6px;
-}
-
-h1 {
-    color: #023e8a;
-    font-size: 1.3em;
-    margin-bottom: 16px;
-    text-shadow: 0 2px 8px #8ecae688;
-}
-
-h2 {
-    color: #219ebc;
-    margin-top: 28px;
-    margin-bottom: 12px;
-}
-
-p {
-    color: #333;
-    line-height: 1.7;
-    font-size: 1.08em;
-    text-align: center;
-}
-
-.thanks {
-    margin-top: 32px;
-    font-weight: bold;
-    color: #219ebc;
-    text-align: center;
-    font-size: 1.2em;
+    box-shadow: none;
 }
 
 iframe {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 2000px; /* גובה גדול כדי שכל הטופס ייכנס */
+    margin: 0 auto;
     border-radius: 16px;
     box-shadow: 0 2px 16px rgba(44,62,80,0.10);
     background: #fff;
     border: none;
-    width: 100%;
-    min-width: 0;
 }
 
+/* אם יש תוכן נוסף (וידאו, כותרות וכו'), אפשר להוסיף עיצוב כאן */
+/* .content, .video-wrapper { */
+/*     display: none; /* אם רוצים להציג רק את הטופס */ */
+/* } */
+
 /* רספונסיביות לנייד */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .page-container {
         max-width: 100vw;
-        padding: 0 0 12px 0;
+        margin: 0;
         border-radius: 0;
-        box-shadow: none;
-        margin-top: 0;
-    }
-    .video-wrapper {
-        max-width: 90vw;
-        min-width: 120px;
-        /* aspect-ratio: 9 / 16; <-- גם כאן אין צורך */
-    }
-    .video-wrapper video {
-        max-height: 230px;
-    }
-    .content {
-        padding: 0 2vw;
-    }
-    h1 {
-        font-size: 1.05em;
-    }
-    p {
-        font-size: 0.98em;
     }
     iframe {
-        width: 98vw !important;
+        width: 100vw !important;
+        min-width: 0 !important;
+        border-radius: 0;
+        height: 2000px;
     }
 }
