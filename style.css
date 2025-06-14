@@ -25,11 +25,12 @@ body {
     margin: 0 auto 18px auto;
     width: 100%;
     max-width: 240px;
-    aspect-ratio: 9 / 16;
     background: #222;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 2px 16px rgba(44,62,80,0.13);
+    /* aspect-ratio: 9 / 16;  <-- הוסר כדי למנוע שטח ריק */
+    padding: 0; /* אין padding מיותר */
 }
 
 .video-wrapper video {
@@ -39,14 +40,7 @@ body {
     object-fit: cover;
     border-radius: 16px;
     background: #222;
-}
-
-.video-tip {
-    text-align: center;
-    color: #219ebc;
-    font-weight: bold;
-    margin-top: 8px;
-    font-size: 1.05em;
+    display: block;
 }
 
 .content {
@@ -102,9 +96,9 @@ iframe {
         margin-top: 0;
     }
     .video-wrapper {
-        max-width: 85vw;
+        max-width: 90vw;
         min-width: 120px;
-        aspect-ratio: 9 / 16;
+        /* aspect-ratio: 9 / 16; <-- גם כאן אין צורך */
     }
     .video-wrapper video {
         max-height: 230px;
